@@ -1,0 +1,117 @@
+body {
+    font-size: 14px;
+    color: #404040;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, "Liberation Sans", "Nimbus Sans L", sans-serif;
+    line-height: 1.43; /* 20/14 */
+
+    background-color: white;
+}
+
+/* --------------------- Mods --------------------- */
+
+.txt-weak{
+    color: #a0a0a0;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+/* --------------------- Matrix --------------------- */
+.matrix{
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    margin: 20px;
+    vertical-align: middle;
+}
+.matrix:before, .matrix:after{
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 0;
+    border: 2px solid black;
+    height: 100%;
+    width: 10px;
+}
+.matrix:before{
+    border-right: none;
+    left: 0;
+}
+.matrix:after{
+    border-left: none;
+    right: 0;
+}
+.matrix .input-text{
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    padding-top: 14px;
+}
+.mx-wrapper{
+    display: inline-block;
+}
+.mx-capture-right{
+    display: inline-block;
+    font-size: 28px;
+    vertical-align: middle;
+}
+.mx-capture-bottom{
+    display: block;
+    font-size: 28px;
+    line-height: 20px;
+    text-align: center;
+}
+
+/* --------------------- Menu --------------------- */
+.menu{
+    background-color: #bcbcbc;
+    box-sizing: border-box;
+    padding: 27px;
+
+    width: 332px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+.menu-edit{
+    background-color: #5199db;
+}
+.menu-error{
+    background-color: #f6c1c0;
+}
+/* --------------------- Message Box --------------------- */
+.message{
+    padding: 5px;
+}
+.error{
+    color: #da0902;
+}
+.calc{
+    margin-left: 332px;
+    padding: 0 20px;
+    margin-top: -4px;
+}
+/* --------------------- Menu Buttons Group --------------------- */
+.menu .btn-group{
+    margin-bottom: 45px;
+}
+.menu .btn-group:nth-child(2){
+    margin-bottom: 49px;
+}
+.menu .btn-group:last-child{
+    margin-bottom: 0;
+}
+
+/* --------------------- Adaptive --------------------- */
+@media screen and (max-width: 640px){
+    .menu{
+        width: auto;
+        position: relative;
+    }
+    .calc{
+        margin-left: 0;
+    }
+}

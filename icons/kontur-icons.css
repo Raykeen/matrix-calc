@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'kontur-icons';
+    src: url('shrift-webfont.eot');
+    src: url('shrift-webfont.eot?#iefix') format('embedded-opentype'),
+         url('shrift-webfont.woff2') format('woff2'),
+         url('shrift-webfont.woff') format('woff'),
+         url('shrift-webfont.ttf') format('truetype'),
+         url('shrift-webfont.svg#kontur-iconiceco') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:after {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'kontur-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: inherit;
+    margin-top: -1px;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"].right:before, [class*=" icon-"].right:before{
+    padding-left: 4px;
+    padding-right: 0;
+    float: right;
+}
+
+[class^="icon-"].left:before, [class*=" icon-"].left:before{
+    padding-left: 0;
+    padding-right: 4px;
+    float: left;
+}
+.icon-checked:before {
+    content: "\e068";
+}
+.icon-printer:before {
+    content: "\e010";
+}
+.icon-card:before {
+    content: "\e019";
+}
+.icon-clear:before {
+    content: "\e012";
+}
+.icon-exchange:before {
+    content: "\e01f";
+}
+.icon-plus:before {
+    content: "\e00d";
+}
+.icon-minus:before {
+    content: "\e01e";
+}

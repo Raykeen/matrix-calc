@@ -1,0 +1,465 @@
+/* Пытался сделать прозрачные границы тенями, получилось неочень
+/* --------------------- COLORS ---------------------
+
+text-color: #404040;
+
+control-grad: #fefefe- #ebebeb;
+control-hover-grad: #f2f2f2 - #dedede;
+control-active: #D7D7D8;
+control-disabled: #f2f2f2;
+control-disabled-text: #808080;
+control-focus-border: #5199db;
+
+btn-green-grad: #4ba91d - #37910b;
+btn-green-border: 1a6706;
+btn-green-border-bottom: 165007;
+btn-green-hover-grad: #3b8d13 - #307e0a;
+btn-green-hover-border: #084902;
+btn-green-hover-border-bottom: #134704;
+btn-green-active: #35840e;
+btn-green-active-border: #073900;
+btn-green-active-border-top: #0d2800;
+
+*/
+
+/* --------------------- Кнопки --------------------- */
+.btn{
+    display: inline-block;
+    cursor: pointer;
+
+    box-sizing: border-box;
+    width: auto;
+    height: 34px;
+    margin: 5px;
+    padding: 6px 12px 8px;
+    vertical-align: middle;
+
+    color: #404040;
+    text-decoration: none;
+
+    background: #fefefe;
+    background: -moz-linear-gradient(top, #fefefe 0%, #ebebeb 100%);
+    background: -webkit-linear-gradient(top, #fefefe 0%,#ebebeb 100%);
+    background: linear-gradient(to bottom, #fefefe 0%,#ebebeb 100%);
+
+    -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 1px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 1px rgba(0,0,0,0.15);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 1px rgba(0,0,0,0.15);
+
+    border-radius: 2px;
+    border: none;
+}
+/* Chrome Fix */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .btn {
+        padding: 7px 12px;
+    }
+}
+
+/* ---- Маленькая кнопока ---- */
+.btn.btn-small{
+    height: 28px;
+    padding: 3px 9px 5px 6px;
+    border-radius: 1px;
+}
+/* Chrome Fix */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .btn.btn-small{
+        padding: 4px 9px 4px 6px;
+    }
+}
+
+/* ---- Большая кнопока ---- */
+.btn.btn-big{
+    height: 38px;
+    font-size: 15px;
+    padding-top: 8px;
+}
+/* ---- Текстовое поле ---- */
+.input-text{
+    padding: 3px 6px 5px;
+
+    margin: 5px;
+
+    background: white;
+
+    border: none;
+    -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 -1px rgba(0,0,0,0.15), 0 1px 1px rgba(0,0,0,0.05) inset;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 -1px rgba(0,0,0,0.15), 0 1px 1px rgba(0,0,0,0.05) inset;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 -1px rgba(0,0,0,0.15), 0 1px 1px rgba(0,0,0,0.05) inset;
+    border-radius: 0;
+}
+/* Chrome Fix */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .input-text {
+        padding: 4px 6px;
+    }
+}
+/* -- Кнопки - наведение -- */
+.btn:hover{
+    background: #f2f2f2;
+    background: -moz-linear-gradient(top, #f2f2f2 0%, #dedede 100%);
+    background: -webkit-linear-gradient(top, #f2f2f2 0%,#dedede 100%);
+    background: linear-gradient(to bottom, #f2f2f2 0%,#dedede 100%);
+}
+
+/* -- Кнопки и Элементы форм - фокус -- */
+.input-text:focus, .btn:focus{
+    outline: none;
+
+    -moz-box-shadow: 0 0 0 2px #5199db, 0 0 0 1px #FFFFFF inset, 0 1px 1px rgba(0,0,0,0.05) inset;
+    -webkit-box-shadow: 0 0 0 2px #5199db, 0 0 0 1px #FFFFFF inset, 0 1px 1px rgba(0,0,0,0.05) inset;
+    box-shadow: 0 0 0 2px #5199db, 0 0 0 1px #FFFFFF inset, 0 1px 1px rgba(0,0,0,0.05) inset;
+}
+
+/* -- Кнопки - нажатые -- */
+.btn:active, .btn.active{
+    line-height: 1.57;
+
+    background: #d9d9d9;
+
+    -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.15), 0 1px 1px rgba(0,0,0,0.15) inset;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.15), 0 1px 1px rgba(0,0,0,0.15) inset;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.15), 0 1px 1px rgba(0,0,0,0.15) inset;
+}
+
+/* -- Кнопки и Элементы форм - недоступность -- */
+.input-text[disabled],
+.btn[disabled]{
+    color: #808080;
+    cursor: default;
+
+    background: #f2f2f2;
+
+    -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+    outline: none;
+}
+
+/* --------------------- Кнопка далее --------------------- */
+.btn.btn-next:not(checked){
+    position: relative;
+    padding-left: 19px;
+    padding-right: 15px;
+    margin-right: 14px;
+}
+.btn.btn-next:not(checked):before, .btn.btn-next:not(checked):after{
+    content: '';
+    height: 59%;
+    width: 10px;
+    position: absolute;
+    right: -6px;
+
+    -moz-box-shadow: 1px 0 0 rgba(0,0,0,0.15);
+    -webkit-box-shadow: 1px 0 0 rgba(0,0,0,0.15);
+    box-shadow: 1px 0 0 rgba(0,0,0,0.15);
+
+    border-radius: 0 3px 3px 0;
+}
+.btn.btn-next.btn-big:before, .btn.btn-next.btn-big:after{
+    right: -7px;
+}
+.btn.btn-next:before{
+    top: 1px;
+
+    background: #fefefe;
+    background: -moz-linear-gradient(204deg, #fefefe 0%, #ebebeb 200%);
+    background: -webkit-linear-gradient(204deg, #fefefe 0%,#ebebeb 200%);
+    background: linear-gradient(204deg, #fefefe 0%, #ebebeb 150%);
+
+    -ms-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+.btn.btn-next:after{
+    bottom: 1px;
+
+    background: #fefefe;
+    background: -moz-linear-gradient(156deg, #fefefe -50%, #ebebeb 100%);
+    background: -webkit-linear-gradient(156deg, #fefefe -50%,#ebebeb 100%);
+    background: linear-gradient(156deg, #fefefe -50%, #ebebeb 100%);
+
+    -ms-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+/* -- Кнопка далее - наведение -- */
+.btn.btn-next:hover:before{
+    background: #f2f2f2;
+    background: -moz-linear-gradient(204deg, #f2f2f2 0%, #dedede 150%);
+    background: -webkit-linear-gradient(204deg, #f2f2f2 0%,#dedede 150%);
+    background: linear-gradient(204deg, #f2f2f2 0%, #dedede 150%);
+}
+.btn.btn-next:hover:after{
+    background: #f2f2f2;
+    background: -moz-linear-gradient(156deg, #f2f2f2 -50%, #dedede 100%);
+    background: -webkit-linear-gradient(156deg, #f2f2f2 -50%,#dedede 100%);
+    background: linear-gradient(156deg, #f2f2f2 -50%, #dedede 100%);
+}
+/* -- Кнопка далее - фокус -- */
+.btn.btn-next:focus:before {
+    -moz-box-shadow:    2.25px 0 0 -0.5px #5199db, 1px 2px 0 0 #5199db, -1.25px 0 0 0 #FFFFFF inset;
+    -webkit-box-shadow: 2.25px 0 0 -0.5px #5199db, 1px 2px 0 0 #5199db, -1.25px 0 0 0 #FFFFFF inset;
+    box-shadow:         2.25px 0 0 -0.5px #5199db, 1px 2px 0 0 #5199db, -1.25px 0 0 0 #FFFFFF inset;
+}
+.btn.btn-next:focus:after {
+    -moz-box-shadow:    2.25px 0 0 -0.5px #5199db, -1.25px 0 0 0 #FFFFFF inset;
+    -webkit-box-shadow: 2.25px 0 0 -0.5px #5199db, -1.25px 0 0 0 #FFFFFF inset;
+    box-shadow:         2.25px 0 0 -0.5px #5199db, -1.25px 0 0 0 #FFFFFF inset;
+}
+
+/* -- Кнопка далее - нажатая -- */
+.btn.btn-next:active:before, .btn.btn-next.active:before,
+.btn.btn-next:active:after, .btn.btn-next.active:after{
+    background: #d9d9d9;
+
+    -moz-box-shadow: 1px 0 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 1px 0 0 rgba(0,0,0,0.2);
+    box-shadow: 1px 0 0 rgba(0,0,0,0.2);
+}
+/* -- Кнопка далее - недоступность -- */
+.btn.btn-next[disabled]:before, .btn.btn-next[disabled]:after{
+    background: #f2f2f2;
+
+    -moz-box-shadow: 1px 0 0 rgba(0,0,0,0.15);
+    -webkit-box-shadow: 1px 0 0 rgba(0,0,0,0.15);
+    box-shadow: 1px 0 0 rgba(0,0,0,0.15);
+}
+
+/* --------------------- Зелёная кнопка --------------------- */
+.btn.btn-green{
+    color: white;
+
+    background: #4ba91d;
+    background: -moz-linear-gradient(top, #4ba91d 0%, #37910b 100%);
+    background: -webkit-linear-gradient(top, #4ba91d 0%,#37910b 100%);
+    background: linear-gradient(to bottom, #4ba91d 0%,#37910b 100%);
+
+    -moz-box-shadow: 0 0 0 1px rgba(26,103,6,0.7), 0 1px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 0 0 1px rgba(26,103,6,0.7), 0 1px rgba(0,0,0,0.15);
+    box-shadow: 0 0 0 1px rgba(26,103,6,0.7), 0 1px rgba(0,0,0,0.15);
+}
+.btn.btn-green.btn-next:before,
+.btn.btn-green.btn-next:after{
+    -moz-box-shadow: 1px 0 0 rgba(26,103,6,0.7);
+    -webkit-box-shadow: 1px 0 0 rgba(26,103,6,0.7);
+    box-shadow: 1px 0 0 rgba(26,103,6,0.7);
+
+    background: #4ba91d;
+}
+.btn.btn-green.btn-next:before{
+    background: -moz-linear-gradient(204deg, #4ba91d 0%, #37910b 150%);
+    background: -webkit-linear-gradient(204deg, #4ba91d 0%,#37910b 150%);
+    background: linear-gradient(204deg, #4ba91d 0%, #37910b 150%);
+}.btn.btn-green.btn-next:after{
+     background: -moz-linear-gradient(156deg, #4ba91d -50%, #37910b 100%);
+     background: -webkit-linear-gradient(156deg, #4ba91d -50%,#37910b 100%);
+     background: linear-gradient(156deg, #4ba91d -50%, #37910b 100%);
+}
+/* -- Зелёная кнопка - наведение -- */
+.btn.btn-green:hover{
+    background: #3b8d13;
+    background: -moz-linear-gradient(top, #3b8d13 0%, #307e0a 100%);
+    background: -webkit-linear-gradient(top, #3b8d13 0%,#307e0a 100%);
+    background: linear-gradient(to bottom, #3b8d13 0%,#307e0a 100%);
+}
+.btn.btn-green.btn-next:hover:before,
+.btn.btn-green.btn-next:hover:after{
+    background: #3b8d13;
+}
+.btn.btn-green.btn-next:hover:before{
+    background: -moz-linear-gradient(204deg, #3b8d13 0%, #307e0a 150%);
+    background: -webkit-linear-gradient(204deg, #3b8d13 0%,#307e0a 150%);
+    background: linear-gradient(204deg, #3b8d13 0%, #307e0a 150%);
+}.btn.btn-green.btn-next:hover:after{
+     background: -moz-linear-gradient(156deg, #3b8d13 -50%, #307e0a 100%);
+     background: -webkit-linear-gradient(156deg, #3b8d13 -50%,#307e0a 100%);
+     background: linear-gradient(156deg, #3b8d13 -50%, #307e0a 100%);
+ }
+/* -- Зелёная кнопка - фокус -- */
+.btn.btn-green:focus, .btn.btn-green:focus{
+    -moz-box-shadow: 0 0 0 2px #5199db, 0 0 0 1px #FFFFFF inset, 0 1px 1px rgba(0,0,0,0.05) inset;
+    -webkit-box-shadow: 0 0 0 2px #5199db, 0 0 0 1px #FFFFFF inset, 0 1px 1px rgba(0,0,0,0.05) inset;
+    box-shadow: 0 0 0 2px #5199db, 0 0 0 1px #FFFFFF inset, 0 1px 1px rgba(0,0,0,0.05) inset;
+}
+.btn.btn-green.btn-next:focus:before {
+    -moz-box-shadow:    2.25px 0 0 -0.5px #5199db, 1px 2px 0 0 #5199db, -1.25px 0 0 0 #FFFFFF inset;
+    -webkit-box-shadow: 2.25px 0 0 -0.5px #5199db, 1px 2px 0 0 #5199db, -1.25px 0 0 0 #FFFFFF inset;
+    box-shadow:         2.25px 0 0 -0.5px #5199db, 1px 2px 0 0 #5199db, -1.25px 0 0 0 #FFFFFF inset;
+}
+.btn.btn-green.btn-next:focus:after {
+    -moz-box-shadow:    2.25px 0 0 -0.5px #5199db, -1.25px 0 0 0 #FFFFFF inset;
+    -webkit-box-shadow: 2.25px 0 0 -0.5px #5199db, -1.25px 0 0 0 #FFFFFF inset;
+    box-shadow:         2.25px 0 0 -0.5px #5199db, -1.25px 0 0 0 #FFFFFF inset;
+}
+
+/* -- Зелёная кнопка - нажатая -- */
+.btn.btn-green:active, .btn.btn-green.active{
+    background: #35840e;
+
+    -moz-box-shadow: 0 0 0 1px rgba(7,57,0,0.7), 0 -1px rgba(0,0,0,0.15), 0 1px 1px rgba(0,0,0,0.15) inset;
+    -webkit-box-shadow: 0 0 0 1px rgba(7,57,0,0.7), 0 -1px rgba(0,0,0,0.15), 0 1px 1px rgba(0,0,0,0.15) inset;
+    box-shadow: 0 0 0 1px rgba(7,57,0,0.7), 0 -1px rgba(0,0,0,0.15), 0 1px 1px rgba(0,0,0,0.15) inset;
+}
+:not(checked).btn.btn-green.btn-next:active,
+:not(checked).btn.btn-green.btn-next.active{
+    border-right-color: transparent;
+}
+.btn.btn-green.btn-next:active:before,
+.btn.btn-green.btn-next:active:after,
+.btn.btn-green.btn-next.active:before,
+.btn.btn-green.btn-next.active:after{
+    background: #35840e;
+
+    -moz-box-shadow: 1px 0 0 rgba(7,57,0,0.7);
+    -webkit-box-shadow: 1px 0 0 rgba(7,57,0,0.7);
+    box-shadow: 1px 0 0 rgba(7,57,0,0.7);
+}
+/* -- Зелёная кнопка - недоступность -- */
+.btn.btn-green[disabled]{
+    color: #808080;
+
+    background: #f2f2f2;
+
+    -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+
+    outline: none;
+}
+.btn.btn-green.btn-next[disabled]:before, .btn.btn-green.btn-next[disabled]:after{
+    background: #f2f2f2;
+
+    border-right-color: rgba(0,0,0,0.15);
+
+    -moz-box-shadow: 1px 0 0 rgba(0,0,0,0.15);
+    -webkit-box-shadow: 1px 0 0 rgba(0,0,0,0.15);
+    box-shadow: 1px 0 0 rgba(0,0,0,0.15);
+}
+
+/* --------------------- Radiobutton --------------------- */
+.input-radio {
+    cursor: pointer;
+    margin: 10px 0 10px 5px;
+}
+.input-radio + label {
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px 15px 10px 5px;
+}
+
+/* Спрячем старый радио */
+.input-radio:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Настроим новый */
+/* Radiobutton - Обводка */
+.input-radio:not(checked) + label i{
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    vertical-align: baseline;
+    content: '';
+
+    width: 16px;
+    height: 16px;
+
+    padding: 0;
+    margin-right: 6px;
+
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.15);
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.3) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.3) 100%);
+}
+/* Radiobutton - Заливка */
+.input-radio:not(checked) + label i:before{
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 14px;
+    height: 14px;
+    margin: 1px;
+    line-height: 12px;
+
+    border-radius: 50%;
+    background: #fefefe;
+    background: -moz-linear-gradient(top, #fefefe 0%, #ebebeb 100%);
+    background: -webkit-linear-gradient(top, #fefefe 0%,#ebebeb 100%);
+    background: linear-gradient(to bottom, #fefefe 0%,#ebebeb 100%);
+}
+/* Radiobutton - Наведение */
+.input-radio + label:hover i:before {
+    background: #f2f2f2;
+    background: -moz-linear-gradient(top, #f2f2f2 0%, #dedede 100%);
+    background: -webkit-linear-gradient(top, #f2f2f2 0%,#dedede 100%);
+    background: linear-gradient(to bottom, #f2f2f2 0%,#dedede 100%);
+}
+/* Radiobutton - Checked */
+.input-radio:checked + label i{
+    background: rgba(0,0,0,0.2);
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.2) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.2) 100%);
+}
+.input-radio:checked + label i:before{
+    background: #d9d9d9;
+
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.15) inset;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15) inset;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15) inset;
+}
+.input-radio:checked + label i:after{
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 8px;
+    height: 8px;
+    margin: 4px;
+    line-height: 12px;
+
+    border-radius: 50%;
+    background: #404040;
+}
+/* Radiobutton - Фокус */
+.input-radio:focus + label i{
+    outline: none;
+    background: #5199db;
+    -moz-box-shadow: 0 0 0 1px #5199db;
+    -webkit-box-shadow: 0 0 0 1px #5199db;
+    box-shadow: 0 0 0 1px #5199db;
+
+}
+.input-radio:focus + label i:before{
+    -moz-box-shadow: 0 0 0 1px #FFFFFF inset;
+    -webkit-box-shadow: 0 0 0 1px #FFFFFF inset;
+    box-shadow: 0 0 0 1px #FFFFFF inset;
+}
+/* Radiobutton - недоступность */
+.input-radio[disabled] + label {
+    cursor: default;
+}
+.input-radio[disabled] + label i{
+    background: rgba(0,0,0,0.15);
+}
+.input-radio[disabled] + label i:before{
+    background: #f2f2f2;
+}
+.input-radio[disabled]:checked + label i:after {
+    background: #808080;
+}

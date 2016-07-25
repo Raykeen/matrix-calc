@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>SKB Kontur test task</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--Reset-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--Icons-->
+    <link rel="stylesheet" href="icons/kontur-icons.css">
+    <!--My CSS-->
+    <link rel="stylesheet" href="css/controls.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript" src="js/html5shiv/html5shiv.min.js"></script>
+</head>
+<body>
+    <aside id="menu" class="menu">
+        <div class="btn-group">
+            <button id="btn-mult-mx" class="btn btn-next btn-green btn-big">Умножить матрицы</button>
+        </div>
+        <div class="btn-group">
+            <button id="btn-clear-mx" class="btn btn-small"><i class="icon-clear left"></i>Очистить матрицы</button>
+            <button id="btn-exchange-mx" class="btn btn-small"><i class="icon-exchange left"></i>Поменять матрицы местами</button>
+        </div>
+        <div class="btn-group">
+            <div class="row">
+                <input id="radio-mx-A" type="radio" class="input-radio" name="mx"><!-- space fix
+                --><label for="radio-mx-A"><i></i>Матрица А</label><!-- space fix
+                --><input id="radio-mx-B" type="radio" class="input-radio" name="mx" checked><!-- space fix
+                --><label for="radio-mx-B"><i></i>Матрица B</label>
+            </div>
+            <div class="row">
+                <button id="btn-add-row-mx" class="btn btn-small">
+                    <i class="icon-plus left"></i>Добавить
+                </button><!-- space fix
+                --><button id="btn-del-row-mx" class="btn btn-small">
+                    <i class="icon-minus left"></i>Удалить
+                </button>
+                <label>строку</label>
+            </div>
+            <div class="row">
+                <button id="btn-add-col-mx" class="btn btn-small">
+                    <i class="icon-plus left"></i>Добавить
+                </button><!-- space fix
+                --><button  id="btn-del-col-mx" class="btn btn-small">
+                    <i class="icon-minus left"></i>Удалить
+                </button>
+                <label>столбец</label>
+            </div>
+            <div class="row">
+                <p id="message" class="message error"></p>
+            </div>
+        </div>
+    </aside>
+    <section class="calc">
+        <div class="row">
+            <div id="mx-wrapper-C" class="mx-wrapper">
+            </div><div id="mx-wrapper-A" class="mx-wrapper"><div class="mx-capture-right">A</div>
+            </div>
+        </div>
+        <div id="mx-wrapper-B" class="mx-wrapper">
+            <div class="mx-capture-bottom">B</div>
+        </div>
+    </section>
+    <script type="text/javascript" src="js/polyfills/classList.min.js" defer></script>
+    <script type="text/javascript" src="js/polyfills/eventListener.polyfill.min.js" defer></script>
+
+    <script type="text/javascript" src="js/Matrix.js" defer></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
+</body>
+</html>

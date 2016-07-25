@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SKB Kontur controls</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="icons/kontur-icons.css">
+    <link rel="stylesheet" href="css/controls.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <section class="sect-buttons">
+        <section class="sect-default">
+            <p>покой</p>
+            <a href="" class="btn"><i class="icon-printer left"></i>Распечатать</a>
+            <input type="button" class="btn btn-small" value='ООО "Петрович"'>
+            <input type="text" class="input-text" placeholder="Значение">
+            <input id="checkbox-1" class="input-radio" type="radio">
+            <label for="checkbox-1"><i></i>Первый вариант</label>
+            <a href="" class="btn positive">Сохранить</a>
+            <a href="" class="btn btn-next">Далее</a>
+            <a href="" class="btn btn-next btn-green">Далее</a>
+        </section>
+        <section class="sect-disabled">
+            <p>недоступность</p>
+            <a href="" class="btn" disabled="true"><i class="icon-printer left"></i>Распечатать</a>
+            <input type="button" class="btn btn-small" value='ООО "Петрович"' disabled>
+            <input type="text" class="input-text" placeholder="Значение" disabled>
+            <input id="checkbox-2" class="input-radio" type="radio" disabled checked>
+            <label for="checkbox-2"><i></i>Первый вариант</label>
+            <a href="" class="btn positive" disabled>Сохранить</a>
+            <a href="" class="btn btn-next" disabled>Далее</a>
+            <a href="" class="btn btn-next btn-green" disabled>Далее</a>
+        </section>
+        <section class="sect-active">
+            <p>нажатая</p>
+            <a href="" class="btn active"><i class="icon-printer left"></i>Распечатать</a>
+            <input type="button" class="btn btn-small" value='ООО "Петрович"'>
+            <input type="text" class="input-text" placeholder="Значение">
+            <input id="checkbox-3" class="input-radio" type="radio" checked>
+            <label for="checkbox-3"><i></i>Первый вариант</label>
+            <a href="" class="btn positive active">Сохранить</a>
+            <a href="" class="btn btn-next active">Далее</a>
+            <a href="" class="btn btn-next btn-green active">Далее</a>
+        </section>
+    </section>
+</body>
+</html>
